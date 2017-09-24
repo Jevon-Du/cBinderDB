@@ -1,5 +1,5 @@
 # cBinderDB
-cBinderDB is an opne, online database that systematically provides information on covalent binding compound structures, chemotypes, targets, covalent binding types and modes, and other biological properties, and related targets.
+cBinderDB is an open, online database that systematically provides information on covalent binding compound structures, chemotypes, targets, covalent binding types and modes, and other biological properties, and related targets.
 
 If you find cBinderDB useful, please consider citing the reference that describes this work:
 
