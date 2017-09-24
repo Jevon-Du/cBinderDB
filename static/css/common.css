@@ -1,0 +1,157 @@
+/* @group general style */
+
+body {
+    color: #555;
+    background-color: #f6f9fa;
+    font-size: 16px;
+        font-family: Roboto, sans-serif;
+        font-weight: 300;
+        line-height: 1.6;
+}
+
+@media (min-width: 768px) {
+    h3 {
+        font-size: 26px;
+        font-weight: 300;
+        line-height: 1.6;
+    }
+    h4 {
+        font-size: 20px;
+        font-weight: 300;
+        line-height: 1.6;
+    }
+}
+
+@media (max-width: 767px) {
+    h3 {
+        font-size: 24px;
+    }
+    h4 {
+        font-size: 16px;
+    }
+}
+
+/* @group noscript */
+.noscript {
+    display: inline-block;
+    width: 100%;
+    font-weight: 700;
+    font-size: 16px;
+    text-align: center;
+}
+
+/* @group header */
+
+
+/*  @group footer */
+.footer {
+    color: #D3D3D3;
+    background-color: #2e2e2e;
+}
+
+.linksBox {
+    font-size: 14px;
+    overflow: hidden;
+    height: 148px;
+}
+
+.linksBox ul {
+    margin-bottom: 0;
+}
+
+.linksBox li a {
+    color: #ada9a9;
+}
+
+/*  @group newslist  */
+.contbox h3 {
+    position: relative;
+    font-weight: 400;
+    border-bottom: solid 1px lightgrey;
+}
+
+.contbox h3 span {
+    position: absolute;
+    right: 10px;
+    bottom: 0;
+    padding: 3px;
+    font-size: 12px;
+    color: #5093c7;
+    text-transform: uppercase;
+}
+
+.contbox h3 a {
+    text-decoration: none;
+}
+
+.autoclip {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.newslist li {
+    padding: 10px 0;
+    line-height: 20px;
+}
+
+.newslist li>span {
+    display: inline-block;
+    font-size: 14px;
+    color: #949494;
+}
+
+.newslist li a>span {
+    color: #6b15a1;
+}
+
+.newslist li a:hover span {
+    font-weight: 400;
+}
+.newslist a {
+    color: black;
+    text-decoration: none !important;
+}
+
+.newslist a:hover {
+    color: #129fd9;
+    transition: all 0.3s ease-in-out 0s;
+}
+
+/*  @group program homepage  */
+
+h2.featurette-heading {
+    margin-top: 10px;
+}
+
+.imgReplace {
+    padding: 3px;
+    border: 4px solid rgba(217, 223, 223, .4);
+    border-radius: 3px;
+}
+
+
+/*  @group publications homepage  */
+
+.paper {
+    margin-bottom: 30px;
+}
+
+.selectBtn .badge {
+    background-color: rgba(153, 102, 204, .4);
+    color: #fff;
+}
+
+.btn-time {
+    padding: 7px 15px;
+    background-color: rgba(217, 223, 223, .3);
+}
+
+.btn-select {
+    background-color: rgba(153, 102, 204, .6);
+    color: #fff;
+}
+
+.paper div {
+    transition: all 0.3s ease-in-out 0s;
+}

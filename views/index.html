@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--  todo:修改网页关键词及描述 -->
+    <meta name="keywords" content="chemical, library, profiling" />
+    <meta name="description" content="本网页用来进行化合物库的比较分析" />
+    <meta name="revised" content="当前版本：v1.0" />
+
+	<title>cBinderDB</title>
+    <link rel="shortcut icon" href="static/img/favicon.ico">
+	<!--  bootstrap  -->
+    <link href="https://cdn.bootcss.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.bootcss.com/animate.css/2.1.0/animate.min.css" rel="stylesheet">
+    <link href="https://cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
+    <!--  导航组件  -->
+	<link href="static/css/bootsnav.css" rel="stylesheet">
+    <link href="static/css/style.css" rel="stylesheet">
+    <link href="static/css/common.css" rel="stylesheet">
+	<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+	<!--[if lt IE 9]>
+	  <script src="static/js/library/html5shiv.min.js"></script>
+	  <script src="static/js/library/respond.min.js"></script>
+	<![endif]-->
+</head>
+<body class="home">
+    <noscript class="noscript bg-warning text-danger">Javascript is required for this site !</noscript>
+    <!-- Start Navigation -->
+    <nav class="navbar navbar-default bootsnav">
+        <div class="container">      
+            <!-- Start Header Navigation -->
+            <div class="navbar-header">
+                <a class="navbar-brand" href="#brand"><img src="static/images/logo.png" class="logo" alt="cBinderDB logo"></a>
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-menu">
+                    <i class="fa fa-bars"></i>
+                </button>   
+            </div>
+            <!-- End Header Navigation -->
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="navbar-menu">
+                <ul class="nav navbar-nav navbar-right" data-in="fadeInDown" data-out="fadeOutUp">
+                    <li><a href="/" class="nav-a-active">Home</a></li>                    
+                    <li><a href="search">Search</a></li>
+                    
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" >Browse</a>
+                        <ul class="dropdown-menu animated">
+                            <li><a href="#">Molecule</a></li>
+                            <li><a href="#">Target</a></li>
+                            <li><a href="#">Refrence</a></li>
+                        </ul>
+                    </li>
+
+                    <li><a href="#">Help</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </div><!-- /.navbar-collapse -->
+        </div>   
+    </nav>
+    <!-- End Navigation -->
+
+    <!-- Start Home -->
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <h2 class="featurette-heading"><a href="http://www.rcdd.org.cn/chemstable" target="_blank" rel="noopener noreferrer"></a><span class="text-muted"></span></h2>
+                <p class="lead">Covalent binding molecules</span> applies their reactive functional groups (also known as electrophilic warhead) to covalently bond to nucleophile residues of target to  exert their excellent characteristics and biological functions. </p>
+            </div>
+            <div class="col-md-6">
+                <!-- Slide start -->
+                <div id="carousel-generic" class="carousel slide" data-ride="carousel">
+                    <!-- Indicators -->
+                    <ol class="carousel-indicators">
+                        <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+                        <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+                        <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+                        <!-- <li data-target="#carousel-example-generic" data-slide-to="3"></li> -->
+                    </ol>
+
+                    <!-- Wrapper for slides -->
+                    <div class="carousel-inner" role="listbox">
+                        <div class="item active">
+                            <img src="static/images/slider/1VM1-Slide.png" alt="SUN YAT-SEN UNIVERSITY">
+                        </div>
+                        <div class="item">
+                            <img src="static/images/slider/2J5F-Slide.png" alt="SUN YAT-SEN UNIVERSITY">
+                        </div>
+                        <div class="item">
+                            <img src="static/images/slider/2JIV-Slide.png" alt="SUN YAT-SEN UNIVERSITY">
+                        </div>
+                    </div>
+
+                    <!-- Controls -->
+                    <a class="left carousel-control" href="#carousel-generic" role="button" data-slide="prev">
+                        <span class="icon-prev" aria-hidden="true"></span>
+                        <span class="sr-only">Previous</span>
+                    </a>
+                    <a class="right carousel-control" href="#carousel-generic" role="button" data-slide="next">
+                        <span class="icon-next" aria-hidden="true"></span>
+                        <span class="sr-only">Next</span>
+                    </a>
+                </div>
+                <!-- Slide end -->
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-7">
+                <div class="contbox">
+                    <h3>
+                        Recent News
+                        <span class="more"><a href="news" title="More">More</a></span>
+                    </h3>
+                    <ul class="newslist list-unstyled">
+                        <li class="autoclip">
+                            <span>05/23/2017</span>
+                            <a href="" title="Congratulations to graduates of RCDD in 2017 for denfencing graduation thesis!">Congratulations to graduates of RCDD in 2017 for denfencing graduation thesis!.</a>
+                        </li>
+                        <li class="autoclip">
+                            <span>05/10/2017</span>
+                            <a href="" title="Congratulations to Shaonan Liu and Xiangkun Luo for obtaining Zhong Fu Xin Zhi scholarships">Congratulations to Shaonan Liu and Xiangkun Luo for obtaining Zhong Fu Xin Zhi scholarships.</a>
+                        </li>
+                        <li class="autoclip">
+                            <span>04/16/2017</span>
+                            <a href="" title="Congratulation on Mengyang Xu's new publication in PLoS Pathog">Congratulation on Mengyang Xu's new publication in PLoS Pathog.</a>
+                        </li>
+                        <li class="autoclip">
+                            <span>02/05/2017</span>
+                            <a href="" title="Congratulation on Jie Cai's new publication in J. Comput. Aided Mol. Des">Congratulation on Jie Cai's new publication in J. Comput. Aided Mol. Des .</a>
+                        </li>
+                        <li class="autoclip">
+                            <span>12/25/2016</span>
+                            <a href="" title="Congratulation on Jiewen Du's new publication in Bioinformatics">Congratulation on Jiewen Du's new publication in Bioinformatics.</a>
+                        </li>
+                        <li class="autoclip">
+                            <span>11/14/2016</span>
+                            <a href="" title="Congratulation on Xiangkun Luo's new publication in J. Nat. Prod">Congratulation on Xiangkun Luo's new publication in J. Nat. Prod</a>
+                        </li>
+
+                    </ul>
+                </div>
+            </div>
+            <div class="col-sm-5">
+                <div class="contbox">
+                    <h3>
+                        Program
+                        <span class="more"><a href="program" title="More">More</a></span>
+                    </h3>
+                    <ul class="newslist list-unstyled">
+                        <li class="autoclip">
+                            <span>04/16/2017</span>
+                            <a href="" title="cBinderDB"><span>cBinderDB</span>: a covalent binder database.</a>
+                        </li>
+                        <li class="autoclip">
+                            <span>04/16/2017</span>
+                            <a href="" title="PNDD for T2D"><span>PNDD</span>: Pharmacological network for Drug Design.</a>
+                        </li>
+                        <li class="autoclip">
+                            <span>04/16/2017</span>
+                            <a href="" title="PNDD for T2D"><span>PTS</span>: Pharmacological network for Drug Design.</a>
+                        </li>
+                        <li class="autoclip">
+                            <span>04/16/2017</span>
+                            <a href="" title="PNDD for T2D"><span>ASDB</span>: Pharmacological network for Drug Design.</a>
+                        </li>
+                        <li class="autoclip">
+                            <span>04/16/2017</span>
+                            <a href="" title="PNDD for T2D"><span>TDMS</span>: Pharmacological network for Drug Design.</a>
+                        </li>
+                        <li class="autoclip">
+                            <span>04/16/2017</span>
+                            <a href="" title="PNDD for T2D"><span>PNDD</span>: Pharmacological network for Drug Design.</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div> 
+    </div>
+
+    <div class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-7">
+                    <div class="contbox">
+                        <h3>Links</h3>
+                        <div class="linksBox">
+                            <ul class="newslist list-unstyled links">
+                                <li class="autoclip">
+                                    <a href="http://ccr.cancer.gov/staff/staff.asp?profileid=5812">
+                                        <span class="glyphicon glyphicon-menu-right"></span> NCI/NIH DNA Topoisomerase/Integrase Group
+                                    </a>
+                                </li>
+                                <li class="autoclip">
+                                    <a href="http://www.icdc.cn/">
+                                        <span class="glyphicon glyphicon-menu-right"></span> National Institute for Communicable Disease Control and Prevention, Chinese Center for Disease Control and Prevention
+                                    </a>
+                                </li>
+                                <li class="autoclip">
+                                    <a href="http://www.dental.upenn.edu/departments_faculty/faculty_directory/yan_yuan/">
+                                        <span class="glyphicon glyphicon-menu-right"></span> Department of Microbiology, University of Pennsylvania
+                                    </a>
+                                </li>
+                                <li class="autoclip">
+                                    <a href="http://mccammon.ucsd.edu/">
+                                        <span class="glyphicon glyphicon-menu-right"></span> J. Andrew McCammon's Group
+                                    </a>
+                                </li>
+                                <li class="autoclip">
+                                    <a href="http://pharmacy.ucsd.edu/labs/gilson/">
+                                        <span class="glyphicon glyphicon-menu-right"></span> Michael K. Gilson's Group
+                                    </a>
+                                </li>
+                                <li class="autoclip">
+                                    <a href="http://www.naturalproductswhistler.com/program.html">
+                                        <span class="glyphicon glyphicon-menu-right"></span> Mechanism-Based Natural Product Development Conference
+                                    </a>
+                                </li>
+                                <li class="autoclip">
+                                    <a href="http://pkusps.bjmu.edu.cn/200412/index.htm">
+                                        <span class="glyphicon glyphicon-menu-right"></span> Peking University School of Pharmaceutical Sciences
+                                    </a>
+                                </li>
+                            </ul>
+                            <ul class="newslist list-unstyled links2">
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-5">
+                    <div class="contbox">
+                        <h3>Contact</h3>
+                        <ul class="newslist list-unstyled">
+                            <li class="">
+                                <span>Addr: 132 East Circle, University City, Guangzhou, China 510006</span>
+                            </li>
+                            <li class="">
+                                <span>Tel: +86-020-3994-3074</span>
+                            </li>
+                            <li class="">
+                                <span>Fax: +86-020-3994-3000</span>
+                            </li>
+                            <li>
+                                <span>E-mail: <a href="mailto:rcdd@biochemomes.com">rcdd@biochemomes.com</a></span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <p>
+                <span>Copyright © 2009-2017 - All Rights Reserved - RCDD</span>
+                <span class="pull-right visitedRecord">Visited: <span class="visitedNum">16865</span></span>
+            </p>
+        </div>
+        <!-- <div class="Copyright">
+                        <div class="container">
+                            
+                        </div>
+                    </div>   -->
+    </div>
+    <!-- End Home -->
+    <div class="clearfix"></div>
+	<script src="https://cdn.bootcss.com/jquery/1.11.3/jquery.min.js"></script>
+    <script src="https://cdn.bootcss.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+	<script src="static/js/library/bootsnav.js"></script>
+</body>
+</html>

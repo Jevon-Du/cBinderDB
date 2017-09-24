@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--  todo:修改网页关键词及描述 -->
+    <meta name="keywords" content="chemical, library, profiling" />
+    <meta name="description" content="本网页用来进行化合物库的比较分析" />
+    <meta name="revised" content="当前版本：v1.0" />
+
+	<title>cBinderDB</title>
+    <link rel="shortcut icon" href="static/img/favicon.ico">
+	<!--  bootstrap  -->
+    <link href="https://cdn.bootcss.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.bootcss.com/animate.css/2.1.0/animate.min.css" rel="stylesheet">
+    <link href="https://cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
+    <!--  导航组件  -->
+	<link href="static/css/bootsnav.css" rel="stylesheet">
+    <link href="static/css/style.css" rel="stylesheet">
+    <link href="static/css/common.css" rel="stylesheet">
+	<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+	<!--[if lt IE 9]>
+	  <script src="static/js/library/html5shiv.min.js"></script>
+	  <script src="static/js/library/respond.min.js"></script>
+	<![endif]-->
+</head>
+<body class="home">
+    <noscript class="noscript bg-warning text-danger">Javascript is required for this site !</noscript>
+    <!-- Start Navigation -->
+    <nav class="navbar navbar-default bootsnav">
+        <div class="container">      
+            <!-- Start Header Navigation -->
+            <div class="navbar-header">
+                <a class="navbar-brand" href="#brand"><img src="static/images/logo.png" class="logo" alt="cBinderDB logo"></a>
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-menu">
+                    <i class="fa fa-bars"></i>
+                </button>   
+            </div>
+            <!-- End Header Navigation -->
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="navbar-menu">
+                <ul class="nav navbar-nav navbar-right" data-in="fadeInDown" data-out="fadeOutUp">
+                    <li><a href="#" class="nav-a-active">Home</a></li>                    
+                    <li><a href="#">Search</a></li>
+                    
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" >Browse</a>
+                        <ul class="dropdown-menu animated">
+                            <li><a href="#">Molecule</a></li>
+                            <li><a href="#">Target</a></li>
+                            <li><a href="#">Refrence</a></li>
+                        </ul>
+                    </li>
+
+                    <li><a href="#">Help</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </div><!-- /.navbar-collapse -->
+        </div>   
+    </nav>
+    <!-- End Navigation -->
+
+    <!-- Start Home -->
+    <div class="container">
+        <ul id="myTab" class="nav nav-tabs" style="margin-top:50px;">
+            <li class="active"><a href="#moleculeSearch" data-toggle="tab">Structure search</a></li>            
+            <li><a href="#targetSearch" data-toggle="tab">String search</a></li>
+        </ul>
+        <div id="myTabContent" class="tab-content" style="margin-bottom:50px;">
+            <div class="tab-pane fade in active" id="moleculeSearch">
+                <div class="row">
+                    <div class="col-xs-12 col-md-6">
+                        <h3>Draw structure</h3>
+                        <iframe id="sketch" src="static/marvin/editor.html" style="width: 540px; height: 470px; border: 1px solid #AAA;"></iframe>
+                        <div class="marvinOptions">
+                            <div class="btn-group">
+                                <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+                                    Method&nbsp;<span class="caret"></span>
+                                </button>
+                                <ul class="dropdown-menu" role="menu">
+                                    <li><a href="#">Exact</a></li>
+                                    <li><a href="#">Substructure</a></li>
+                                    <li><a href="#">Similarity</a></li>                                    
+                                </ul>
+                            </div>
+                            <div class="btn-group">
+                                <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+                                    Similarity&nbsp;<span class="caret"></span>
+                                </button>
+                                <ul class="dropdown-menu" role="menu">
+                                    <li><a href="#" value="0.9">>=90%</a></li>
+                                    <li><a href="#" value="0.8">>=80%</a></li>
+                                    <li><a href="#" value="0.7">>=70%</a></li>
+                                    <li><a href="#" value="0.6">>=60%</a></li>
+                                    <li><a href="#" value="0.5">>=50%</a></li>                                   
+                                </ul>
+                            </div>
+                            <button type="button" class="btn btn-primary smile-submit">Submit</button>
+                        </div>                        
+                    </div>
+                    <div class="col-xs-12 col-md-6">
+                        <div role="form" style="margin-top:30px;margin-bottom: 38px;">
+                            <h4 class="text-primary">Seasrch Options</h4>
+                            
+                            <div class="form-group ">
+                                <label for="smile">Select method</label>
+                                <input type="text" class="form-control" id="smileInput" placeholder="Enter smile">
+                            </div>
+                            <div class="form-group">
+                                <label for="inchikeyInput">Similarity</label>
+                                <input type="text" class="form-control" id="inchikeyInput" placeholder="Enter InChIKey">
+                            </div>
+                            <div class="form-group">
+                                <label for="inchikeyInput">Similarity</label>
+                                <input type="text" class="form-control" id="inchikeyInput" placeholder="Enter InChIKey">
+                                <input type="text" class="form-control" id="inchikeyInput" placeholder="Enter InChIKey">
+                            </div>
+                            <button type="button" class="btn btn-primary smile-submit">Reset</button>
+                            <button type="button" class="btn btn-primary smile-submit">Submit</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="tab-pane fade" id="targetSearch">
+                <form class="bs-example bs-example-form" role="form">
+                    <div class="col-xs-12">
+                        <div class="input-group">
+                            <span class="input-group-btn">
+                                <button class="btn btn-warning" type="button">Target</button>
+                            </span>
+                            <input type="text" class="form-control">
+                            <span class="input-group-btn">
+                                <button class="btn btn-default" type="button">Go!</button>
+                            </span>
+                        </div><!-- /input-group -->
+                    </div><!-- /.col-lg-6 -->
+                    <div class="col-xs-12">
+                        <div class="input-group">
+                            <span class="input-group-btn">
+                                <button class="btn btn-warning" type="button">Gene</button>
+                            </span>
+                            <input type="text" class="form-control">
+                            <span class="input-group-btn">
+                                <button class="btn btn-default" type="button">Go!</button>
+                            </span>
+                        </div><!-- /input-group -->
+                    </div><!-- /.col-lg-6 -->
+                    <div class="col-xs-12">                                                    
+                        <textarea rows="3" cols="10">
+                            在w3school，你可以找到你所需要的所有的网站建设教程。
+                        </textarea>
+                    </div><!-- /.col-lg-6 -->
+                </form>
+            </div>
+        </div> 
+    </div>
+
+    <div class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-7">
+                    <div class="contbox">
+                        <h3>Links</h3>
+                        <div class="linksBox">
+                            <ul class="newslist list-unstyled links">
+                                <li class="autoclip">
+                                    <a href="http://ccr.cancer.gov/staff/staff.asp?profileid=5812">
+                                        <span class="glyphicon glyphicon-menu-right"></span> NCI/NIH DNA Topoisomerase/Integrase Group
+                                    </a>
+                                </li>
+                                <li class="autoclip">
+                                    <a href="http://www.icdc.cn/">
+                                        <span class="glyphicon glyphicon-menu-right"></span> National Institute for Communicable Disease Control and Prevention, Chinese Center for Disease Control and Prevention
+                                    </a>
+                                </li>
+                                <li class="autoclip">
+                                    <a href="http://www.dental.upenn.edu/departments_faculty/faculty_directory/yan_yuan/">
+                                        <span class="glyphicon glyphicon-menu-right"></span> Department of Microbiology, University of Pennsylvania
+                                    </a>
+                                </li>
+                                <li class="autoclip">
+                                    <a href="http://mccammon.ucsd.edu/">
+                                        <span class="glyphicon glyphicon-menu-right"></span> J. Andrew McCammon's Group
+                                    </a>
+                                </li>
+                                <li class="autoclip">
+                                    <a href="http://pharmacy.ucsd.edu/labs/gilson/">
+                                        <span class="glyphicon glyphicon-menu-right"></span> Michael K. Gilson's Group
+                                    </a>
+                                </li>
+                                <li class="autoclip">
+                                    <a href="http://www.naturalproductswhistler.com/program.html">
+                                        <span class="glyphicon glyphicon-menu-right"></span> Mechanism-Based Natural Product Development Conference
+                                    </a>
+                                </li>
+                                <li class="autoclip">
+                                    <a href="http://pkusps.bjmu.edu.cn/200412/index.htm">
+                                        <span class="glyphicon glyphicon-menu-right"></span> Peking University School of Pharmaceutical Sciences
+                                    </a>
+                                </li>
+                            </ul>
+                            <ul class="newslist list-unstyled links2">
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-5">
+                    <div class="contbox">
+                        <h3>Contact</h3>
+                        <ul class="newslist list-unstyled">
+                            <li class="">
+                                <span>Addr: 132 East Circle, University City, Guangzhou, China 510006</span>
+                            </li>
+                            <li class="">
+                                <span>Tel: +86-020-3994-3074</span>
+                            </li>
+                            <li class="">
+                                <span>Fax: +86-020-3994-3000</span>
+                            </li>
+                            <li>
+                                <span>E-mail: <a href="mailto:rcdd@biochemomes.com">rcdd@biochemomes.com</a></span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <p>
+                <span>Copyright © 2009-2017 - All Rights Reserved - RCDD</span>
+                <span class="pull-right visitedRecord">Visited: <span class="visitedNum">16865</span></span>
+            </p>
+        </div>
+        <!-- <div class="Copyright">
+                        <div class="container">
+                            
+                        </div>
+                    </div>   -->
+    </div>
+    <!-- End Home -->
+    <div class="clearfix"></div>
+	<script src="https://cdn.bootcss.com/jquery/1.11.3/jquery.min.js"></script>
+    <script src="https://cdn.bootcss.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+	<script src="static/js/library/bootsnav.js"></script>
+</body>
+</html>
